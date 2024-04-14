@@ -1,5 +1,0 @@
-H10 - Help and Documentation
-H8 - Aesthetic and Minimalist design
-H7 - Flexibility and Ease of Use
-H5 - Error prevention
-H3 - User control and freedom
