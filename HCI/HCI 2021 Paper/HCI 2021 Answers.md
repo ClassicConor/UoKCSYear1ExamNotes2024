@@ -30,15 +30,15 @@ There are a wide range of controls and widgets to choose for the user interface 
 
 > (i) Page 1: Users can choose one type of burger from Hamburger, Chicken burger, Veggie burger.
 
-[fill in answer]
+Radio Button
 
 > (ii) Page 2: Users can choose one or multiple toppings from Tomato, Lettuce, Pickles, Cheese.
 
-[fill in answer]
+Checkbox
 
 > (iii) Page 3: Users can select one type of cheese from Mozzarella, Gouda, Cheddar, Swiss cheese, Blue cheese, Brie, Monterey jack, Goat cheese.
 
-[fill in answer]
+Drop down list
 
 ## Question 2
 
@@ -52,7 +52,7 @@ KLM-GOMS stands for Keystroke-level model for Goals, Operators, Methods, and Sel
 
 HPKHK
 
-1. H - Place the hand on the keyboard
+1. H - Place the hand on the mouse
 2. P - Move the mouse the upper text box
 3. K - Click on the text box
 4. H - Move the hand onto the correct key on the keyboard

@@ -8,8 +8,7 @@ A micro-interaction is a small, contained product moment that revolves around a 
 
 > (b) What are the problems with using a red circle to indicate “stop”, which changes to a green circle when it is safe for the user to proceed with their action?
 
-The problem with using a red circle to indicate “stop” is that it is not universally understood.
-In some cultures, red is associated with danger, while in others, it is associated with luck.
+The problem with using a red circle to indicate “stop” is that it is not universally understood. In some cultures, red is associated with danger, while in others, it is associated with luck.
 
 This can lead to confusion and misinterpretation of the message.
 Additionally, color blindness can make it difficult for some users to distinguish between red and green, further complicating the message.

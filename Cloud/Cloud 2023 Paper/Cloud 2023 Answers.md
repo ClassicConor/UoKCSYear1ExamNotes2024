@@ -53,6 +53,8 @@ If the request of the user is to launch an app, the request will get routed to t
 
 > d. Suppose that one of the digital apps needs to request information from the digital app platform (e.g. to store statistics associated with the users of the online platform). Draw the missing arrow in the above diagram. Justify your answer
 
+![Question 1D Drawing](Question1DDrawing.png)
+
 The arrow should go between the digital app cloud stack and the API gateway. This is because when you take it through the API gateway, it'll know where in the program to send the data.
 
 ## Question 2
@@ -114,4 +116,4 @@ The master data uses the meta data to determine which chuck to show the user.
 
 > iii: How does GFS handle fault tolerance of master and chunk servers
 
-[fill in answer]
+GFS handles fault tolerance by replicating the master's state and storing data on multiple chunk servers. This means that if the master fails, a backup can take over, while chunk replicas are maintained across multiple servers.
