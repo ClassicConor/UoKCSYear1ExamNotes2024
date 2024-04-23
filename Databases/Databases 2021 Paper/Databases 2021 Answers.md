@@ -171,25 +171,29 @@ Correct JavaSript code:
 
 ```JavaScript
 function printResult() {
-    let federerScore = 0;
-    let nadalScore = 0;
-    // Loop through each set and update scores
-    for (let i = 1; i <= 5; i++) {
-        let federerSetScore = parseInt(document.getElementById('set' + i).getElementsByTagName('td')[0].textContent);
-        let nadalSetScore = parseInt(document.getElementById('set' + i).getElementsByTagName('td')[2].textContent);
-        if (federerSetScore > nadalSetScore) {
-            federerScore++;
+    let p1ScoreCount = 0;
+    let p2ScoreCount = 0;
+    let tableLength = document.getElementsByTagName("table")[0].rows.length;
+    console.log(tableLength);
+    for (let i = 1; i < tableLength; i++) {
+        let p1Score = parseInt(document.getElementById("set" + i).getElementsByTagName("td")[0].textContent);
+        let p2Score = parseInt(document.getElementById("set" + i).getElementsByTagName("td")[2].textContent);
+        if (p1Score > p2Score) {
+            p1ScoreCount += 1;
         } else {
-            nadalScore++;
+            p2ScoreCount += 1;
         }
     }
-    let winningPlayer = (federerScore > nadalScore) ? 'Federer' : 'Nadal';
-    let scoreInSets = Math.max(federerScore, nadalScore) + '-' + Math.min(federerScore, nadalScore);
-    let totalSets = federerScore + nadalScore;
-    let resultString = winningPlayer + ' won ' + scoreInSets + ' in ' + totalSets + ' sets';
-    document.getElementById('result').textContent = resultString;
-        }
-
+    let resultHTML = document.getElementById("result");
+    let p1Name = document.getElementById("players").getElementsByTagName("th")[0].textContent;
+    let p2Name = document.getElementById("players").getElementsByTagName("th")[2].textContent;
+    if (p1ScoreCount > p2ScoreCount) {
+        resultHTML.innerHTML = p1Name + " won " + p1ScoreCount + "-" + p2ScoreCount + " in " + (tableLength - 1) + " sets.";
+    } else {
+        resultHTML.textContent = p1Name + " won " + p1ScoreCount + "-" + p2ScoreCount + " in " + (tableLength - 1) + " sets.";
+        console.log("yeah")
+    }
+}
 ```
 
 ## Question 3
@@ -220,7 +224,9 @@ Recall that array \$arr can be defined using a statement of the form:
 >
 > would print `Blue`.
 
----------------
+```php
+$arr = array("One", true);
+```
 
 > (ii) Give an array `$arr` such that
 >
@@ -232,7 +238,13 @@ Recall that array \$arr can be defined using a statement of the form:
 >
 > Note: the for loop must do three iterations in case (iii).
 
----------------
+```php
+$arr = array(
+    "One",
+    false,
+    1,
+    array("Gre", "en"));
+```
 
 > (iii) Give an array `$arr` such that `test($arr)` 
 >
@@ -244,7 +256,9 @@ Recall that array \$arr can be defined using a statement of the form:
 >
 > Note: the for loop must do three iterations in case (iii).
 
----------------
+```php
+$arr = array("",false, 2, array("Pink ", "Purple ", "Violet"))
+```
 
 ### (b) Consider the following code fragment in a file index.php
 
@@ -253,6 +267,9 @@ Recall that array \$arr can be defined using a statement of the form:
     $_SESSION[‘name’] = ‘Alice’;
     setcookie(‘name’,‘Bob’,strtotime(“+1 month”));
 ?>
+```
+
+```html
 <form action="next_page.php" method="post">
     <input type="text" name="trainer"> <br>
     <input type="radio" name="s1" value="Jog"> Jog <br>
@@ -265,18 +282,23 @@ Answer the following questions:
 
 > (i) State which of the superglobal variables are certainly set in next_page.php, and which may be set or not depending on the user’s behaviour in index.php. Justify your answer.
 
----------------
+---- come back to this---
+<!-- `name` would be classed as a superglobal variable. This is because when we pass through the variable name, it is able to be passed through multiple pages, keeping its value. `trainer` is not -->
 
 > (ii) Assume that all the superglobal variable(s) you mentioned in your answer to (i) are passed to next_page.php. Complete the code fragment below (i.e., to be included in next_page.php) so that all values of the superglobal variables are printed as a sequence of “echo” statements. Give a possible solution of printing all these variables using the sequence of echo statements you have given.
+>
+> ```php
+> session_start();
+> echo ...;
+> echo ...;
+> ... 
+> ```
 
-```php
-session_start();
-echo ...;
-echo ...;
-... 
-```
+-----------------
 
 > (iii) Is method post the best method to be used in index.php? Justify your answer.
+
+The `POST` method may not be the best method to use for index.php. This is because if we wanted to access the same information, it would have to come with the request, and the user wouldn't be able to bookmark the page. If we used the `GET` method, it would provide a unique url, and the user would be able to bookmark the page, and return to the page.
 
 ## Question 4
 
@@ -284,16 +306,54 @@ A database includes information on people and clubs. Each person is identified b
 
 > (a) Write SQL CREATE TABLE statements for the tables in the problem statement above. Justify your choices of primary and foreign keys.
 
----------------
+Person table:
+
+```SQL
+CREATE TABLE People (
+    PersonID INT PRIMARY KEY,
+    FullName VARCHAR(255),
+    PhoneNumber VARCHAR(20)
+    ClubID INT
+    FOREIGN KEY (ClubID) REFERENCES Club(ClubID),
+);
+```
+
+Club table:
+
+```SQL
+CREATE TABLE Club (
+    ClubID INT PRIMARY KEY,
+    ClubName VARCHAR(255),
+    City VARCHAR(255),
+);
+```
+
+We chose the PersonID as the primary key because it's the only value that is guaranteed to be unique. This applies to ClubID also.
 
 ### (b) Write SQL statements to perform the following tasks
 
-> (i) Insert a new person as a member of a club. 
+> (i) Insert a new person as a member of a club.
 
-------------
+```SQL
+INSERT INTO People (FullName, PhoneNumber, ClubID)
+VALUES ("Steve Harvey", "+44 3322-183211", 3);
+```
 
 > (ii) Retrieve the name, phone number and club name of all people whose club is located in any city ending by “don”.
 
----------------
+```sql
+SELECT p.FullName, p.PhoneNumber, c.ClubName
+FROM People p
+JOIN Club c ON p.ClubID = c.ClubID
+WHERE RIGHT(City, 3) = "don";
+```
 
 > (iii) Retrieve the number of members of each city (all in one query) and return only the clubs with at least 1 member.
+
+```sql
+SELECT c.City, c.ClubName, COUNT(p.PersonID) AS NumberOfMembers
+FROM Club c
+LEFT JOIN People p ON c.ClubID = p.ClubID
+GROUP BY c.City, c.ClubName
+HAVING COUNT(p.PersonID) >= 1;
+```

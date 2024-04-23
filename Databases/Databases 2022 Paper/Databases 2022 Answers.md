@@ -437,8 +437,8 @@ CREATE TABLE Book (
 > (i) Insert a new entry in the user table (for a set of values at your choice).
 
 ```SQL
-INSERT INTO User (UserID, Name, PhoneNumber)
-VALUES (1, 'Peter Griffin', '01227-223990');
+INSERT INTO User (Name, PhoneNumber)
+VALUES ('Peter Griffin', '01227-223990');
 ```
 
 > (ii) List the title for all books with author "Stephen King".

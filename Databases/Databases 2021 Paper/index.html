@@ -42,30 +42,37 @@
 
     <script>
         function printResult() {
-            let federerScore = 0;
-            let nadalScore = 0;
+            let p1ScoreCount = 0;
+            let p2ScoreCount = 0;
 
-            // Loop through each set and update scores
-            for (let i = 1; i <= 5; i++) {
-                let federerSetScore = parseInt(document.getElementById('set' + i).getElementsByTagName('td')[0].textContent);
-                let nadalSetScore = parseInt(document.getElementById('set' + i).getElementsByTagName('td')[2].textContent);
+            let tableLength = document.getElementsByTagName("table")[0].rows.length;
+            console.log(tableLength);
 
-                if (federerSetScore > nadalSetScore) {
-                    federerScore++;
+            for (let i = 1; i < tableLength; i++) {
+                let p1Score = parseInt(document.getElementById("set" + i).getElementsByTagName("td")[0].textContent);
+                let p2Score = parseInt(document.getElementById("set" + i).getElementsByTagName("td")[2].textContent);
+
+                if (p1Score > p2Score) {
+                    p1ScoreCount += 1;
                 } else {
-                    nadalScore++;
+                    p2ScoreCount += 1;
                 }
             }
 
-            let winningPlayer = (federerScore > nadalScore) ? 'Federer' : 'Nadal';
-            let scoreInSets = Math.max(federerScore, nadalScore) + '-' + Math.min(federerScore, nadalScore);
-            let totalSets = federerScore + nadalScore;
+            let resultHTML = document.getElementById("result");
+            let p1Name = document.getElementById("players").getElementsByTagName("th")[0].textContent;
+            let p2Name = document.getElementById("players").getElementsByTagName("th")[2].textContent;
 
-            let resultString = winningPlayer + ' won ' + scoreInSets + ' in ' + totalSets + ' sets';
-            document.getElementById('result').textContent = resultString;
+            if (p1ScoreCount > p2ScoreCount) {
+                resultHTML.innerHTML = p1Name + " won " + p1ScoreCount + "-" + p2ScoreCount + " in " + (tableLength - 1) + "sets";
+            } else {
+                resultHTML.textContent = p1Name + " won " + p1ScoreCount + "-" + p2ScoreCount + " in " + (tableLength - 1) + "sets";
+                console.log("yeah")
+            }
         }
 
         window.onload = printResult;
+
     </script>
 </body>
 
