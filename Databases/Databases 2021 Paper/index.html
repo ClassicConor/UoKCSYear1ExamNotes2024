@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Wimbledon 2008 Men's Final</title>
+</head>
+
+<body>
+    <table>
+        <tr id="players">
+            <th>Federer</th>
+            <th>Sets</th>
+            <th>Nadal</th>
+        </tr>
+        <tr id="set1">
+            <td>4</td>
+            <td>1</td>
+            <td>6</td>
+        </tr>
+        <tr id="set2">
+            <td>4</td>
+            <td>2</td>
+            <td>6</td>
+        </tr>
+        <tr id="set3">
+            <td>7</td>
+            <td>3</td>
+            <td>6</td>
+        </tr>
+        <tr id="set4">
+            <td>7</td>
+            <td>4</td>
+            <td>6</td>
+        </tr>
+        <tr id="set5">
+            <td>7</td>
+            <td>5</td>
+            <td>9</td>
+        </tr>
+    </table>
+    <p id="result"></p>
+
+    <script>
+        function printResult() {
+            let federerScore = 0;
+            let nadalScore = 0;
+
+            // Loop through each set and update scores
+            for (let i = 1; i <= 5; i++) {
+                let federerSetScore = parseInt(document.getElementById('set' + i).getElementsByTagName('td')[0].textContent);
+                let nadalSetScore = parseInt(document.getElementById('set' + i).getElementsByTagName('td')[2].textContent);
+
+                if (federerSetScore > nadalSetScore) {
+                    federerScore++;
+                } else {
+                    nadalScore++;
+                }
+            }
+
+            let winningPlayer = (federerScore > nadalScore) ? 'Federer' : 'Nadal';
+            let scoreInSets = Math.max(federerScore, nadalScore) + '-' + Math.min(federerScore, nadalScore);
+            let totalSets = federerScore + nadalScore;
+
+            let resultString = winningPlayer + ' won ' + scoreInSets + ' in ' + totalSets + ' sets';
+            document.getElementById('result').textContent = resultString;
+        }
+
+        window.onload = printResult;
+    </script>
+</body>
+
+</html>

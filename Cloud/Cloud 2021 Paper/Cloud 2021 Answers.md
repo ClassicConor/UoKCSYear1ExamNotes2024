@@ -20,16 +20,24 @@ From initial conversations, you know:
 
 > (ii) On the diagram for (i), indicate the likely Type of Cloud Service and Type of Cloud for each stack.
 
-[Insert answer]
+Templeman Library:
+
+- SaaS (You don't control the infrastructre, platform, or software, but you control the functions which are deployed)
+- Hybrid (relies on the third-party cloud)
+
+Beaney and library cloud:
+
+- PaaS (because you don't control the hardware or underlying operating system, but you can deploy as many verisons of the app as possible)
+- Private (doesn't rely on anyone else)
+
+Third-party cloud:
+
+- FaaS (provides a number of specific functions, and not even the app)
+- Private (doesn't rely on anyone else)
 
 ### Part B
 
-The Internet Protocol (IP) can sometimes surprise with its flexibility. Since the overall design is close enough to the principles of the OSI Protocol Model, IP is independent of the Data Link and Physical network layers.
-
-And some Norwegians indeed showed successful IP network transmission is possible with carrier pigeons.
-
-> (i) If we would want to attempt to use carrier pigeons to establish a TCP connection between Canterbury and London, how long would it take to successfully establish the transmission under perfect conditions? (Assume the pigeons are perfectly reliable.) Explain how you come to your result.
-
+ch
 [insert answer]
 
 > c. To view the notes of a page, the following steps will happen: (1) the web client will call the “view book notes” function; (2) the function will retrieve a book page via the Templeman library; (3) the function will add the notes to the page and send it back to the web client. Describe briefly the most important factors that will affect the performance of the “view book notes” function. (Hint: you can write a basic equation, or performance model, to help your explanation).
