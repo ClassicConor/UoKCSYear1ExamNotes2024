@@ -10,7 +10,7 @@ For each of the following activity, match the activity to the most appropriate H
 
 > (i) Activity 1: Peter Opsvik noticed his three-year old son Thor – too big for a high chair but too small for an adult chair – struggled for a place at the family dining table.
 
-Define stage - We already know who we are designing for (a child), and we have **passed the empathise stage**. We are now attempting to understand their problem, defining their needs based on current observatiosn.
+Empathise stage - We already know who we are designing for (a child), and we have **passed the empathise stage**. We are now attempting to understand their problem, defining their needs based on current observatiosn.
 
 > (ii) Activity 2: A user is shown an interface prototype by a facilitator and asked to do Heuristic Evaluation for the interface design
 
@@ -146,7 +146,7 @@ Steps with rules:
 23. P - Move the mouse to the button
 24. K - Click on the button
 
-Final result: RMHPKMRMPKMRMPKMMPKMRMPKM
+Final result: RMHPKMRMPKMRMPKMMPKMRMPK
 
 > (ii) Using your solution from (i), apply the rules for mental operations where applicable and use your final formula to make a prediction of the time it will take a skilled user to complete the task.
 
