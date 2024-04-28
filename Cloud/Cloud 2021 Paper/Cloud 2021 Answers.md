@@ -37,18 +37,19 @@ Third-party cloud:
 
 ### Part B
 
-ch
-[insert answer]
+The Internet Protocol (IP) can sometimes surprise with its flexibility. Since the overall design is close enough to the principles of the OSI Protocol Model, IP is independent of the Data Link and Physical network layers.
 
-> c. To view the notes of a page, the following steps will happen: (1) the web client will call the “view book notes” function; (2) the function will retrieve a book page via the Templeman library; (3) the function will add the notes to the page and send it back to the web client. Describe briefly the most important factors that will affect the performance of the “view book notes” function. (Hint: you can write a basic equation, or performance model, to help your explanation).
+And some Norwegians indeed showed successful IP network transmission is possible with carrier pigeons.
 
-[Insert answer]
-
-> For the experiment, let’s assume that the concrete distance between Canterbury and London is 60miles (or ca. 100km) and our pigeons fly with a speed of 60 miles per hour (or ca. 100km/h).
-
-> (ii) With current technology and considering the weight a pigeon can carry, we are able to send 2TB of data on an USB stick with a pigeon. On a 4G mobile network, we can likely send about 2MB/s. Which of the two transport media would have the shorter message transmission time for a 2TB message? (We again assume pigeons to be perfectly reliable). Briefly explain your reasoning.
+> (i) If we would want to attempt to use carrier pigeons to establish a TCP connection between Canterbury and London, how long would it take to successfully establish the transmission under perfect conditions? (Assume the pigeons are perfectly reliable.) Explain how you come to your result.
 
 [insert answer]
+
+For the experiment, let’s assume that the concrete distance between Canterbury and London is 60miles (or ca. 100km) and our pigeons fly with a speed of 60 miles per hour (or ca. 100km/h).
+
+> (ii) With current technology and considering the weight a pigeon can carry, we are able to send 2TB of data on an USB stick with a pigeon. On a 4G mobile network, we can likely send about 2MB/s. Which of the two transport media would have the shorter message transmission time for a 2TB message? (We again assume pigeons to be perfectly reliable).
+>
+> Briefly explain your reasoning.
 
 ## Question 2
 
@@ -58,7 +59,7 @@ ch
 
 > b. The traditional Turing architecture is not energy-efficient. Explain what cause this issue in the Turing computer and how Steve Furber’s SpiNNaker, as an example of a non-Turing computer, addresses the above issue.
 
-[insert answer]
+
 
 ## Question 3: Map/Reduce and related technologies
 

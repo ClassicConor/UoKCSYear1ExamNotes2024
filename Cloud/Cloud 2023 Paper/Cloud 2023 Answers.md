@@ -63,23 +63,22 @@ The arrow should go between the digital app cloud stack and the API gateway. Thi
 
 > i. Define distributed systems and discuss their key characteristics
 
-A distribured system is one in which components located at networked computeres communicate and coordinate their actions only by passing messages. These means a lack of a global clock, and it allows for independent failures of components, and it's able to handle multiple types of tasks.
+A distribured system is one in which components located at networked computeres communicate and coordinate their actions only by passing messages. These means a lack of a global clock, and it allows for independent failures of components, and it's able to handle multiple types of tasks (concurrent).
 
 > ii Among the following systems, identify which are distributed systems and which are not. Justify your answer
 
 1. A single computer running multiple applications
+
 2. A network of computers working together to perform a task
+
 3. A cloud computing system where multiple virtual machines run on a single physical machine.
+
 4. A file server which stores and serves files to clients over a local area network (LAN)
 
 1 is not, because it's a single computer.
 2 is a distributed system, because it refers to multiple computers being used at once.
 3 is not a distributed system, because although there are multiple virtual machines running, it's still only running on a single machine.
 4 is not a distributed system because if the file server fails, then the whole system fails. It doesn't allow for an independent failure of components.
-
-> iii What is the purpose of consensus algorithms in distributed systems? Provide one example of a use case
-
-Consensus algorithms in distributed systems ensure all nodes agree on a consistent state despite faults. In blockchain, they validate transactions and maintain the integrity of the ledger without a central authority.
 
 > (b) This question part is about Map Reduce. Consider the problem of creating an inverted index for a large collection of text documents. An inverted index is a data structure that maps words to the documents in which they appear. Describe how the inverted index problem can be solved using the MapReduce programming model. Your solution should include a general explanation of the approach and also the behaviour for the map and reduce functions, using pseudocode or any programming language of your choice
 
