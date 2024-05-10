@@ -124,7 +124,7 @@ independent failures of components, and it’s able to handle multiple
 types of tasks (concurrent).
 
 #quote(block: true)[
-ii Among the following systems, identify which are distributed systems
+ii. Among the following systems, identify which are distributed systems
 and which are not. Justify your answer
 ]
 
