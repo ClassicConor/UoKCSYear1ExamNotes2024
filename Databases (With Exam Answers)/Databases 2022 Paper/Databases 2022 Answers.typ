@@ -20,8 +20,7 @@ td th table { border: solid 1px }
 <p style="colour:green">CO323 Coursework</p>
 <table>
 <tr><th>Question<th></th>Solution</th></tr>
-<tr><td>How to calculate width?</td><td>Try
-/td></tr>
+<tr><td>How to calculate width?</td><td>Try code()</td></tr>
 </table>
 <caption>Notes</caption>
 </body>
@@ -116,6 +115,8 @@ table, td {
 </body>
 </html>
 ```
+
+#pagebreak()
 
 == Question 2
 <question-2>
@@ -288,6 +289,8 @@ Corresponding final output:
   ]
 )
 
+#pagebreak()
+
 == Question 3
 <question-3>
 === (a) A PHP function is defined as follows
@@ -410,6 +413,8 @@ print count($arr);
 ```
 ]
 
+The output will be: `4`
+
 === (b)The following is the body of a web document titled index.html
 <bthe-following-is-the-body-of-a-web-document-titled-index.html>
 ```html
@@ -457,7 +462,6 @@ contents to be used at a later date.
 ]
 
 ```php
-<?php
 // Check if the form has been submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
@@ -471,7 +475,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "You submitted the city: " . $cityName;
     }
 }
-?>
 ```
 
 #quote(block: true)[
@@ -491,6 +494,8 @@ then the url that will be displayed will look like this:
 `http://example.com/search.php?cityName=Paris`
 
 It will have `search.php`, then `?`, then `cityName=Paris`.
+
+#pagebreak()
 
 == Question 4
 <question-4>

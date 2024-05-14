@@ -121,6 +121,8 @@ div.exam p {
 }
 ```
 
+#pagebreak()
+
 == Question 2
 <question-2>
 #quote(block: true)[
@@ -246,6 +248,8 @@ function printResult() {
     }
 }
 ```
+
+#pagebreak()
 
 == Question 3
 <question-3>
@@ -390,6 +394,8 @@ come with the request, and the user wouldn’t be able to bookmark the
 page. If we used the `GET` method, it would provide a unique url, and
 the user would be able to bookmark the page, and return to the page.
 
+#pagebreak()
+
 == Question 4
 <question-4>
 A database includes information on people and clubs. Each person is
@@ -410,7 +416,7 @@ Person table:
 
 ```sql
 CREATE TABLE People (
-    PersonID INT PRIMARY KEY,
+    PersonID INT PRIMARY KEY AUTO_INCREMENT,
     FullName VARCHAR(255),
     PhoneNumber VARCHAR(20)
     ClubID INT
