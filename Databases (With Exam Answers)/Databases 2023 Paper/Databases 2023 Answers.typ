@@ -96,6 +96,8 @@ Example:
 <div>This is a <p>block-level</p> element.</div>
 ```
 
+#pagebreak()
+
 == Question 2
 <question-2>
 #quote(block: true)[
@@ -203,6 +205,8 @@ Errors in code:
 else if (mark >= 40)
 ```
 
+#pagebreak()
+
 == Question 3
 <question-3>
 === (a) An associated array named scores is used to record the team and score on a Sunday rugby match as given below
@@ -264,7 +268,7 @@ $scores["Northampton"] = 58;
 
 ```php
 $totalTeams = count($scores);
-echo "Total teams: $totalTeams";
+echo "Total teams: " . $totalTeams";
 ```
 
 #block[
@@ -324,6 +328,8 @@ useful for remembering a user’s preference on a website, as well as
 whether a user is logged in. If the user is logged in, then
 different/additional layouts to the page may be shown.
 
+#pagebreak()
+
 == Question 4
 <question-4>
 === (a) Consider the SQL code below. You need to understand what the queries are doing and write down the results. Be aware that not all queries written here are correct
@@ -360,11 +366,25 @@ INSERT INTO Presentations VALUES (31, '2023-01-01','Salzburg',1);
 ]
 ]
 
-Author Table: authorID | surname| firstName –| ——| ———– 1 | Novikova |
-Julia 2 | etrebko | Anna 3 | Terfe |Bryn 4 | Terfe | Bryn 2 | Kauffmann
-| Jonas
+=== Author table:
 
-Presentations Table:
+#figure(
+  align(center)[#table(
+    columns: 3,
+    align: (auto,auto,auto,),
+    table.header([authorID], [surname], [firstName],),
+    table.hline(),
+    [1], [Novikova], [Julia],
+    [2], [Netrebko], [Anna],
+    [3], [Terfel], [Bryn],
+    [4], [Terfel], [Bryn],
+  )],
+)
+
+(note: attempting to insert Kauffmann into the Author table with the ID of 2 will cause an error, as this ID is already in use)
+
+
+=== Presentations Table:
 
 #figure(
   align(center)[#table(
@@ -372,7 +392,7 @@ Presentations Table:
     align: (auto,auto,auto,auto,),
     table.header([presentationID], [date], [location], [authorID],),
     table.hline(),
-    [32], [023-01-04], [Salzburg], [1],
+    [3], [023-01-04], [Salzburg], [1],
     [30], [2023-01-04], [London], [2],
     [31], [2023-01-01], [Salzburg], [1],
   )]
@@ -399,6 +419,17 @@ There are two presentations presented by Julia Novikova.
 SELECT COUNT(*) FROM Author WHERE firstName='Anna'
 ```
 ]
+
+#figure(
+  align(center)[#table(
+    columns: 1,
+    align: (auto,),
+    table.header([COUNT(\*)],),
+    table.hline(),
+    [1],
+  )]
+  , kind: table
+  )
 
 ```sql
 COUNT(*)
