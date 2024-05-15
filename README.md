@@ -4,8 +4,8 @@ Hope to regularly upload, including with past papers, notes, etc. I cannot guara
 
 This is the current status of these:
 
-- FOC 1 (all filled in)
-- FOC 2 (none filled in)
+- FOC 1 (all filled in. 2021 has official answers)
+- FOC 2 (one filled in. 2021 has official answers)
 - Databases (all filled in)
 - Cloud (partially filled in)
 - HCI (all filled in)
