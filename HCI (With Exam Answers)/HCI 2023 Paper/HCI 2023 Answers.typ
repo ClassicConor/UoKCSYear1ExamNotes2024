@@ -173,9 +173,11 @@ buttons on the website were very small and without even spacing, it
 would likely be much easier for the user to accidentely click on the
 wrong button, simply because everything’s so close together.
 
-A second way that could be used to reduce slips is to have a mechanism
-which provides feedback. For example, when a user fills in a form and
-sends it off, a confirmation message could pop up to to confirm this.
+The second way to reduce slips within the system is by using
+vivid colours for both the text and the buttons. If the text and buttons
+were all the same colour, it would be much easier for the user to
+accidentally click on the wrong button, as they would all blend in
+together.
 
 #quote(block: true)[
 #block[

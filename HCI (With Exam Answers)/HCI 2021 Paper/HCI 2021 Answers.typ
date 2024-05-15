@@ -40,13 +40,15 @@ problem is being dealt with.
 ]
 ]
 
-H7 - Flexbility and efficiency of use. The inability for the user to
-insert a delivery address for a website is a major flaw in the design of
-the website.
+H7 - User control and freedom. The inability for the user to insert a
+delivery address for a website is a major flaw in the design of the
+website.
 
-I would give this a severity rating of 4, as by not being able to insert
-a delivery address, it makes the entire task impossible, and therefore
-the application or website functionally useless.
+I would give this a severity rating of 4, because without the ability to
+input a delivery address, the website is essentially useless, as the
+primary function of the website is to deliver food to the user. This
+problem can be fixed by adding a text box for the user to input their
+address.
 
 #quote(block: true)[
 #block[
