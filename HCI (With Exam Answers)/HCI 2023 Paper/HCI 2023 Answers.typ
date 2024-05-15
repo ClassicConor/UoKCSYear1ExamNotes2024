@@ -114,8 +114,8 @@ work.
 ]
 
 The type of forcing function being used in this scenario is an interlock
-forcing function. An interlock forcing function prevents the user from
-taking an action until a specific condition is met. In this case, the
+forcing function. An interlock forcing function forces the user to take
+actions in a specific order in order to prevent errors. In this case, the
 user is prevented from taking their money until they have taken their
 card.
 
