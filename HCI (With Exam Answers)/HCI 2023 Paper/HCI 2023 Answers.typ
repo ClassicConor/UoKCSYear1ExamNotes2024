@@ -47,7 +47,7 @@ lighting is poor.
 ]
 ]
 
-Menu depth refers to the number of levels in a menu hierarchy, while
+Menu depth refers to the number of layers in a menu hierarchy, while
 menu breadth refers to the number of choices at each level. A shallow
 menu with a large breadth is generally better for presenting menu
 choices to users, as it allows users to quickly access the information
