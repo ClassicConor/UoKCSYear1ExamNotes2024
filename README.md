@@ -4,7 +4,7 @@ Hope to regularly upload, including with past papers, notes, etc. **I cannot gua
 
 This is the current status of these:
 
-- FOC 1 (all filled in. 2021 has official answers)
+- FOC 1 (all filled in. Contains official answers for all past papers)
 - FOC 2 (all filled in. 2021 has official answers)
 - Databases (all filled in)
 - Cloud (partially filled in)
