@@ -354,22 +354,18 @@ Answer the following questions:
 #block[
 #set enum(numbering: "(i)", start: 1)
 + State which of the superglobal variables are certainly set in
-  next\_page.php, and which may be set or not depending on the user’s
-  behaviour in index.php. Justify your answer.
+  next\_page.php, and which may be set or not depending on the user’s behaviour in index.php. Justify your answer.
 ]
 ]
 
-—- come back to this—
+- \$\_SESSION is certainly set because starting a session and setting a session variable does not depend on user behavior after the initial session_start() call.
+- \$\_COOKIE depends on whether the user's browser accepts cookies and sends them back in subsequent requests.
+- \$\_POST depends on whether the user submits the form in index.php.
 
 #quote(block: true)[
 #block[
 #set enum(numbering: "(i)", start: 2)
-+ Assume that all the superglobal variable(s) you mentioned in your
-  answer to (i) are passed to next\_page.php. Complete the code fragment
-  below (i.e., to be included in next\_page.php) so that all values of
-  the superglobal variables are printed as a sequence of "echo"
-  statements. Give a possible solution of printing all these variables
-  using the sequence of echo statements you have given.
++ Assume that all the superglobal variable(s) you mentioned in your answer to (i) are passed to next\_page.php. Complete the code fragment below (i.e., to be included in next\_page.php) so that all values of the superglobal variables are printed as a sequence of "echo" statements. Give a possible solution of printing all these variables using the sequence of echo statements you have given.
 ]
 
 ```php
@@ -379,6 +375,22 @@ echo ...;
 ... 
 ```
 ]
+
+```php
+<?php
+session_start();
+
+// Print the session variable
+echo 'Session name: ' . $_SESSION['name'] . '<br>';
+
+// Print the cookie variable
+echo 'Cookie name: ' . $_COOKIE['name'] . '<br>';
+
+// Print the POST variables
+echo 'Trainer: ' . $_POST['trainer'] . '<br>';
+echo 's1: ' . $_POST['s1'] . '<br>';
+?>
+```
 
 #quote(block: true)[
 #block[
@@ -418,9 +430,20 @@ Person table:
 CREATE TABLE People (
     PersonID INT PRIMARY KEY AUTO_INCREMENT,
     FullName VARCHAR(255),
-    PhoneNumber VARCHAR(20)
-    ClubID INT
-    FOREIGN KEY (ClubID) REFERENCES Club(ClubID),
+    PhoneNumber VARCHAR(20),
+    ClubID INT,
+    FOREIGN KEY (ClubID) REFERENCES Club(ClubID)
+);
+```
+
+Alternative method with shorter reference:
+
+```sql
+CREATE TABLE People (
+    PersonID INT PRIMARY KEY AUTO_INCREMENT,
+    FullName VARCHAR(255),
+    PhoneNumber VARCHAR(20),
+    ClubID INT REFERENCES Club(ClubID)
 );
 ```
 

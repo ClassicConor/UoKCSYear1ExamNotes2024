@@ -477,6 +477,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 ```
 
+Alternative solution:
+
+```php
+<?php
+// Start the session if needed (not strictly necessary for this task, but often used)
+session_start();
+
+// Retrieve the submitted city name from the POST data
+$cityName = $_POST['cityName'];
+
+// Display the city name. htmlspecialchars is used to prevent XSS attacks by converting special characters to HTML entities so that they are displayed as text
+echo 'You searched for the city: ' . htmlspecialchars($cityName);
+?>
+```
+
 #quote(block: true)[
 #block[
 #set enum(numbering: "(i)", start: 4)
