@@ -31,15 +31,10 @@ Identify four problems with the above code by stating the corresponding
 line number and show how you fix those errors.
 ]
 
-- Line 5: include commas between td, th, table to make sure that all are
-  referenced.
+- Line 5: include commas between td, th, table to make sure that all are referenced.
 - Line 9: Change `colour` to `color`
-- Line 11: For the second table header, use an opening tag instead of a
-  closing tag (currently, it’s `</th>Solution</th>`, but this needs to
-  change to `<th>Solution</th>`)
-- Line 12 - After the word `Try`, change the direction of the arrow so
-  that it is facing left instead of right (replace `try>/td>` with
-  `try</td>`)
+- Line 11: For the second table header, use an opening tag instead of a closing tag (currently, it’s `</th>Solution</th>`, but this needs to change to `<th>Solution</th>`)
+- Line 14 - The <caption> tag should be placed within the <table> tag for it to be valid HTML.
 
 #quote(block: true)[
 #block[
@@ -106,7 +101,7 @@ table, td {
     <td><b>B</b></td> <!-- Add bold text with <b> tag -->
   </tr>
   <tr>
-    <td><b>C<b></td> <!-- Add bold text with <b> tag -->
+    <td><b>C</b></td> <!-- Add bold text with <b> tag -->
     <td>1</td>
     <td>2</td>
   </tr>
@@ -447,11 +442,7 @@ The output will be: `4`
 ]
 ]
 
-After the user inserts a city into the name into the text box and clicks
-submit, the browser will then send an HTTP POST request to the url
-specified in the action form, which here is `search.php`. The data is
-send over the data from within the text box, potentially allowing its
-contents to be used at a later date.
+A HTTP POST request is sent to "search.php". In addition, the data from the form, specifically the "cityName" input text box, is made available to "search.php" using the \$\_POST superglobal array.
 
 #quote(block: true)[
 #block[
@@ -577,6 +568,19 @@ CREATE TABLE Book (
     AuthorID INT,
     FOREIGN KEY (BorrowerID) REFERENCES User(UserID),
     FOREIGN KEY (AuthorID) REFERENCES Author(AuthorID)
+);
+```
+
+Alternative solution for the Book table:
+
+```sql
+CREATE TABLE Book (
+    BookID INT PRIMARY KEY,
+    Title VARCHAR(255),
+    Category VARCHAR(50),
+    PublicationYear INT,
+    BorrowerID INT REFERENCES User(UserID),
+    AuthorID INT REFERENCES Author(AuthorID)
 );
 ```
 
