@@ -54,7 +54,7 @@
 ]
 
 ```css
-.div.container p {
+div.container p {
     color: blue;
 }
 ```
