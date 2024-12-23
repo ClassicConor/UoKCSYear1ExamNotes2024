@@ -1,6 +1,6 @@
 # Foundations of Computing 1 - Overview
 
-The potential topics on the exam include:
+The potential topics on the exam could include:
 
 1. Functions, linear algebra and quadratics (easy)
 2. Approximations and errors (medium)
